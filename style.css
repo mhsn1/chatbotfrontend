@@ -1,0 +1,399 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chat Container */
+/* Chat Container */
+#chat-container {
+    display: none; 
+         /* Replace 'your-image-url.jpg' with the actual path or URL of your image */
+        background-size: cover; /* This property ensures that the background image covers the entire element */
+        background-repeat: no-repeat; /* This property prevents the background image from repeating */
+        background-position: center center; /* This property centers the background image */
+      
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px; /* Adjust the width as needed */
+    max-height: 600px; /* Adjust the height as needed */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(250, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Initially hidden */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+
+#greetings.chat-message
+{
+float: left;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    color:  #212020;
+    font-weight: bold; 
+    
+    font-family: 'SORA';
+
+}
+
+#options.chat-message{
+    float: right;
+    background-color: rgba(0, 128, 0, 0.5);
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    color:  #212020
+
+}
+
+
+
+
+#chat-container.active {
+    display: block; /* Show the chat container */
+}
+
+/* ... rest of your CSS ... */
+
+
+/* Chat Header */
+#chat-header 
+{
+
+   
+    font-weight: bold; 
+    
+    font-family: 'SORA', sans-serif;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    background-color:  #FF633F;
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+#close-btn {
+    background: none;
+    border: none;
+    color: #FF633F;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: normal;
+}
+#close-btn:hover {
+    font-weight: bold; 
+    color: #ffffff;
+
+}
+/* Chat Body */
+#chat-body {
+    padding: 15px;
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#follow-up .writer {
+    text-align: center;
+  }
+  
+  #typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 30px;
+    font-size: 18px; /* Adjust font size as needed */
+    border-right: 2px solid orange;
+    animation: blink-caret 0.6s step-end infinite, type 5s steps(56, end);
+  }
+  
+/* Chat Message */
+.chat-message {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+
+
+
+
+
+    
+    background-color: #ffffff;
+    font-family: 'SORA', sans-serif;
+    margin-bottom: 10px;
+    
+    border-radius: 5px;
+    max-width: 90%;
+    color: rgb(20, 20, 20);
+}
+
+/* Quick Reply Buttons */
+.quick-reply-btn {
+   
+
+   
+
+    background-color: #ffffff;
+    color: rgb(10, 11, 10);
+    
+   
+
+    margin-bottom: 5px;
+    
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+     
+
+
+
+
+    font-family: 'SORA', sans-serif;
+
+   padding: 20px;
+border: 2px solid #DB7BFF !important;
+border-radius: 6px;
+display: inline-block;
+
+
+  }
+
+
+       
+
+.quick-reply-btn:hover {
+  
+
+    text-shadow: 1px 1px 0  #007DFF, 2px 2px 0 #DB7BFF, 3px 3px 0 #F1F55F;
+  transform: translate(-3px, -3px);
+  
+    
+
+}
+
+/* Chat Input */
+#chat-input {
+    padding: 10px;
+    border-top: 1px solid #f1f1f1;
+}
+
+#chat-input input {
+    width: calc(100% - 80px); /* Adjust width as needed */
+    padding: 8px;
+    border-radius: 50px;
+    
+    border: 2px solid #000;
+    margin-right: 5px;
+}
+
+/*#chat-input button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ Chat Icon */
+/*#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000; /* Same as chat container to keep consistent layering
+}
+*/
+
+
+/* Chat Icon with Image */
+#chat-icon {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Keep it above other content */
+}
+
+#chat-icon img {
+    width: 50px; /* Set the width as needed */
+    height: 50px; /* Set the height as needed */
+    border-radius: 50%; /* Optional: if you want the image to be round */
+}
+
+
+/* Additional styles for hiding elements */
+.chat-hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+.chatbot-container {
+    position: relative;
+    /* Other styling as needed */
+}
+
+
+  .notification-tab {
+    position: absolute;
+    left: 1177px; /* Adjust as per the size of the tab */
+    top: 716px;
+    width: 160px; /* Adjust as per your layout */
+    height: 21px; /* Adjust as per your layout */
+    background-color: #FF633F;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 5px 5px 10px #DB7BFF; /* Initial shadow */
+    
+    /* Additional styling */
+    animation: blink-shadow 1s infinite;
+  }
+  
+  @keyframes blink-shadow {
+    0%, 50%, 101% {
+      box-shadow: 5px 5px 10px #DB7BFF; /* Visible shadow */
+    }
+    25%, 75% {
+      box-shadow: none; /* No shadow */
+    }
+  }
+  #common-container {
+    position: fixed; /* Or any other positioning */
+    
+    /* Any other styling */
+}
+
+  
+  
+  
+
+    /*#   212020
+    #db7bff
+    #f1f55f
+    #ff633d;s
+    #007dff*/
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+   

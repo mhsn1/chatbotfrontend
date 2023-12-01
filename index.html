@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockapex Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Chat Container -->
+
+
+    <div id="common-container">
+        <div class="notification-tab blinking-shadow">Welcome to Blockapex</div>
+        <div class="chatbot-icon" id="chatbotIcon"><!-- Icon here --></div>
+    </div>
+    <div id="chat-container" class="chat-hidden">
+
+
+
+        
+        <div id="chat-header"> 
+            <span>Blockapex</span>
+            
+
+
+
+            <button id="close-btn">X</button>
+        </div>
+        
+        <div id="chat-body">
+            
+            <div id="greetings" class="chat-message">
+                
+                <div id="typed-text"></div> 
+                
+                
+          <!-- Typing effect will be displayed here -->
+            
+        </div>
+        
+            <div id="options" class="chat-message">
+                <button class="quick-reply-btn" data-topic="audit">What is included in DApp security?</button>
+                <button class="quick-reply-btn" data-topic="browse">How much does Tokenomics design cost</button>
+                <button class="quick-reply-btn" data-topic="smartcontract">How long does a Smart contract audit take?</button>
+                <button class="quick-reply-btn" data-topic="development">What time is required for basic MVP development</button>
+                           </div>
+            <div id="follow-up" class="chat-message chat-hidden">
+                <div id="typing-text"></div>
+                
+                
+                <!-- This will be populated with follow-up messages -->
+            </div>
+        </div>
+        <div id="chat-input" class="chat-hidden">
+            <input type="email" id="emailInput"placeholder="Enter Your Email">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    
+
+    <!-- Chat Icon -->
+    <div id="chat-icon">
+        <img src="logo.png" alt="Chat Icon" id="chat-icon">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
