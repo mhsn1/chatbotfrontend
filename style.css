@@ -255,7 +255,9 @@ display: inline-block;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 5px 5px 10px #DB7BFF; /* Shadow for depth */
     white-space: nowrap; /* Prevents text wrapping */
-    margin-right: 10px; /* Space between notification tab and chatbot icon */
+    margin-right: 10px;
+     animation: blink-shadow 1s infinite;
+    /* Space between notification tab and chatbot icon */
 }
 
 /* Chatbot icon style */
