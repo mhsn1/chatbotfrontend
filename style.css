@@ -75,44 +75,8 @@ float: left;
 /* Chat Header */
 #chat-header 
 {
-
-   
     font-weight: bold; 
-    
     font-family: 'SORA', sans-serif;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     background-color:  #FF633F;
     color: #ffffff;
     padding: 15px;
@@ -143,26 +107,6 @@ float: left;
     overflow-y: auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #follow-up .writer {
     text-align: center;
   }
@@ -179,30 +123,9 @@ float: left;
 /* Chat Message */
 .chat-message {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     font-size: 0.875rem;
     line-height: 1.25rem;
 
-
-
-
-
-
-    
     background-color: #ffffff;
     font-family: 'SORA', sans-serif;
     margin-bottom: 10px;
@@ -214,9 +137,6 @@ float: left;
 
 /* Quick Reply Buttons */
 .quick-reply-btn {
-   
-
-   
 
     background-color: #ffffff;
     color: rgb(10, 11, 10);
@@ -227,11 +147,7 @@ float: left;
     
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-     
-
-
-
-
+  
     font-family: 'SORA', sans-serif;
 
    padding: 20px;
@@ -241,9 +157,6 @@ display: inline-block;
 
 
   }
-
-
-       
 
 .quick-reply-btn:hover {
   
@@ -317,24 +230,6 @@ display: inline-block;
 .chat-hidden {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 .chatbot-container {
     position: relative;
@@ -342,21 +237,55 @@ display: inline-block;
 }
 
 
-  .notification-tab {
-    position: absolute;
-    left: 1177px; /* Adjust as per the size of the tab */
-    top: 716px;
-    width: 160px; /* Adjust as per your layout */
-    height: 21px; /* Adjust as per your layout */
+  /* Common container for notification tab and chatbot icon */
+#common-container {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    display: flex; /* Use flexbox to align children elements */
+    align-items: center; /* Align items vertically */
+    z-index: 1000; /* High z-index to ensure it's on top */
+}
+
+/* Notification tab style */
+.notification-tab {
     background-color: #FF633F;
-    padding: 10px;
-    border-radius: 10px;
     color: #ffffff;
-    box-shadow: 5px 5px 10px #DB7BFF; /* Initial shadow */
-    
-    /* Additional styling */
-    animation: blink-shadow 1s infinite;
-  }
+    padding: 10px 20px; /* Same padding on all sides */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 5px 5px 10px #DB7BFF; /* Shadow for depth */
+    white-space: nowrap; /* Prevents text wrapping */
+    margin-right: 10px; /* Space between notification tab and chatbot icon */
+}
+
+/* Chatbot icon style */
+#chatbotIcon {
+    display: block; /* Changed from flex to block for the image */
+    width: 50px; /* Set the width as needed */
+    height: 50px; /* Set the height as needed */
+    border-radius: 50%; /* Optional: if you want the image to be round */
+    background: url('path-to-your-icon.png') no-repeat center center; /* Replace with your image path */
+    background-size: cover; /* Ensure the icon covers the area */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #common-container {
+        right: 10px; /* Adjust the right position for mobile view */
+        bottom: 10px; /* Adjust the bottom position for mobile view */
+    }
+
+    .notification-tab, #chatbotIcon {
+        padding: 8px 16px; /* Adjust the padding for mobile view */
+        width: auto; /* Let the width be automatic */
+        margin-right: 0; /* Remove margin-right on mobile for the notification tab */
+    }
+
+    #chatbotIcon {
+        margin-left: 10px; /* Add some space between the elements on mobile */
+    }
+}
+
   
   @keyframes blink-shadow {
     0%, 50%, 101% {
